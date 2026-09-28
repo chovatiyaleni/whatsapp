@@ -11,13 +11,12 @@
     <!-- Main WhatsApp Container -->
     <div class="h-screen w-full flex overflow-hidden">
         <!-- Left Navigation Sidebar -->
-        <div class="w-20 bg-white border-r border-gray-200 flex flex-col items-center justify-between py-3">
+        <div class="w-20 sm:w-20 md:w-20 bg-white border-r border-gray-200 flex flex-col items-center justify-between py-3 flex-shrink-0">
             <!-- Top Navigation -->
             <div class="flex flex-col items-center gap-6 w-full">
                 <!-- Chats -->
                 <button type="button" class="relative w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-800 text-xl">
                     <i class="fa-regular fa-message"></i>
-                    
                 </button>
                 <!-- Calls -->
                 <button type="button" class="w-12 h-12 rounded-full flex items-center justify-center text-gray-600 text-xl hover:bg-gray-100">
@@ -53,38 +52,38 @@
             </div>
         </div>
         <!-- Chat List Section -->
-        <div class="w-[30%] min-w-[430px] max-w-[520px] bg-white border-r border-gray-200 flex flex-col">
+        <div class="w-[30%] min-w-[360px] max-w-[520px] lg:w-[30%] md:w-[40%] sm:w-[45%] bg-white border-r border-gray-200 flex flex-col flex-shrink-0">
             <!-- Chat Header -->
-            <div class="h-20 px-6 flex items-center justify-between">
-                <h1 class="text-3xl font-bold text-[#16a34a]">WhatsApp</h1>
-                <div class="flex items-center gap-7">
+            <div class="h-20 px-4 sm:px-5 md:px-6 flex items-center justify-between flex-shrink-0">
+                <h1 class="text-2xl sm:text-3xl font-bold text-[#16a34a]">WhatsApp</h1>
+                <div class="flex items-center gap-4 sm:gap-6 md:gap-7">
                     <button type="button" class="text-gray-700 text-xl">
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </button>
-                    <button type="button" class="w-12 h-12 rounded-full bg-green-600 text-white flex items-center justify-center text-xl">
+                    <button type="button" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-green-600 text-white flex items-center justify-center text-lg sm:text-xl">
                         <i class="fa-solid fa-message"></i>
                     </button>
                 </div>
             </div>
             <!-- Search -->
-            <div class="px-6 pb-3">
-                <div class="h-12 rounded-full bg-gray-100 flex items-center px-5">
+            <div class="px-4 sm:px-5 md:px-6 pb-3 flex-shrink-0">
+                <div class="h-11 sm:h-12 rounded-full bg-gray-100 flex items-center px-4 sm:px-5">
                     <i class="fa-solid fa-magnifying-glass text-gray-500"></i>
-                    <input type="text" placeholder="Search or start a new chat" class="w-full bg-transparent outline-none ml-4 text-base text-gray-700">
+                    <input type="text" placeholder="Search or start a new chat" class="w-full bg-transparent outline-none ml-3 sm:ml-4 text-sm sm:text-base text-gray-700">
                 </div>
             </div>
             <!-- Chat Filters -->
-            <div class="px-6 pb-4 flex items-center gap-2 overflow-hidden">
-                <button type="button" class="px-5 py-2 rounded-full bg-green-100 border border-green-300 text-green-700 text-sm font-medium">
+            <div class="px-4 sm:px-5 md:px-6 pb-4 flex items-center gap-2 overflow-x-auto flex-shrink-0">
+                <button type="button" class="px-4 sm:px-5 py-2 rounded-full bg-green-100 border border-green-300 text-green-700 text-sm font-medium whitespace-nowrap">
                     All
                 </button>
-                <button type="button" class="px-5 py-2 rounded-full border border-gray-300 text-gray-600 text-sm whitespace-nowrap">
+                <button type="button" class="px-4 sm:px-5 py-2 rounded-full border border-gray-300 text-gray-600 text-sm whitespace-nowrap">
                     Unread 2
                 </button>
-                <button type="button" class="px-5 py-2 rounded-full border border-gray-300 text-gray-600 text-sm">
+                <button type="button" class="px-4 sm:px-5 py-2 rounded-full border border-gray-300 text-gray-600 text-sm whitespace-nowrap">
                     Favourites
                 </button>
-                <button type="button" class="px-5 py-2 rounded-full border border-gray-300 text-gray-600 text-sm">
+                <button type="button" class="px-4 sm:px-5 py-2 rounded-full border border-gray-300 text-gray-600 text-sm whitespace-nowrap">
                     Groups
                 </button>
                 <button type="button" class="w-10 h-10 rounded-full border border-gray-300 text-gray-600 flex items-center justify-center text-lg flex-shrink-0">
@@ -94,140 +93,138 @@
             <!-- Chat List -->
             <div class="flex-1 overflow-y-auto">
                 <!-- Chat 1 -->
-                <div class="h-24 px-6 flex items-center hover:bg-gray-100 cursor-pointer">
-                    <div class="w-14 h-14 rounded-full bg-pink-200 flex items-center justify-center text-pink-700 text-xl flex-shrink-0">
+                <div class="h-24 px-4 sm:px-5 md:px-6 flex items-center hover:bg-gray-100 cursor-pointer">
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-pink-200 flex items-center justify-center text-pink-700 text-xl flex-shrink-0">
                         <i class="fa-solid fa-users"></i>
                     </div>
-                    <div class="ml-4 flex-1 min-w-0 border-b border-gray-100 h-full flex flex-col justify-center">
-                        <div class="flex items-center justify-between">
-                            <h3 class="text-base font-medium text-gray-900">Grp 1</h3>
-                            <span class="text-xs text-gray-500">1:19 pm</span>
+                    <div class="ml-3 sm:ml-4 flex-1 min-w-0 border-b border-gray-100 h-full flex flex-col justify-center">
+                        <div class="flex items-center justify-between gap-2">
+                            <h3 class="text-sm sm:text-base font-medium text-gray-900 truncate">Grp 1</h3>
+                            <span class="text-xs text-gray-500 whitespace-nowrap">1:19 pm</span>
                         </div>
                     </div>
                 </div>
                 <!-- Chat 2 -->
-                <div class="h-24 px-6 flex items-center hover:bg-gray-100 cursor-pointer">
-                    <div class="w-14 h-14 rounded-full bg-orange-300 flex items-center justify-center text-white text-xl flex-shrink-0">
+                <div class="h-24 px-4 sm:px-5 md:px-6 flex items-center hover:bg-gray-100 cursor-pointer">
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-orange-300 flex items-center justify-center text-white text-xl flex-shrink-0">
                         <i class="fa-solid fa-user"></i>
                     </div>
-                    <div class="ml-4 flex-1 min-w-0 border-b border-gray-100 h-full flex flex-col justify-center">
-                        <div class="flex items-center justify-between">
-                            <h3 class="text-base font-medium text-gray-900">Rahul</h3>
-                            <span class="text-xs text-gray-500">3:27 pm</span>
+                    <div class="ml-3 sm:ml-4 flex-1 min-w-0 border-b border-gray-100 h-full flex flex-col justify-center">
+                        <div class="flex items-center justify-between gap-2">
+                            <h3 class="text-sm sm:text-base font-medium text-gray-900 truncate">Rahul</h3>
+                            <span class="text-xs text-gray-500 whitespace-nowrap">3:27 pm</span>
                         </div>
-                        <div class="flex items-center justify-between mt-1">
-                            <p class="text-sm text-gray-600 truncate">
+                        <div class="flex items-center justify-between mt-1 gap-2">
+                            <p class="text-xs sm:text-sm text-gray-600 truncate">
                                 <span class="text-blue-500 mr-1">✓✓</span>
                                 <i class="fa-regular fa-file mr-1"></i> send pdf
                             </p>
-                            <i class="fa-solid fa-thumbtack text-gray-500 text-sm"></i>
+                            <i class="fa-solid fa-thumbtack text-gray-500 text-sm flex-shrink-0"></i>
                         </div>
                     </div>
                 </div>
                 <!-- Chat 3 -->
-                <div class="h-24 px-6 flex items-center hover:bg-gray-100 cursor-pointer">
-                    <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 text-xl flex-shrink-0">
-                         <i class="fa-solid fa-user"></i>
+                <div class="h-24 px-4 sm:px-5 md:px-6 flex items-center hover:bg-gray-100 cursor-pointer">
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 text-xl flex-shrink-0">
+                        <i class="fa-solid fa-user"></i>
                     </div>
-                    <div class="ml-4 flex-1 min-w-0 border-b border-gray-100 h-full flex flex-col justify-center">
-                        <div class="flex items-center justify-between">
-                            <h3 class="text-base font-medium text-gray-900">Riya</h3>
-                            <span class="text-xs text-gray-500">Thursday</span>
+                    <div class="ml-3 sm:ml-4 flex-1 min-w-0 border-b border-gray-100 h-full flex flex-col justify-center">
+                        <div class="flex items-center justify-between gap-2">
+                            <h3 class="text-sm sm:text-base font-medium text-gray-900 truncate">Riya</h3>
+                            <span class="text-xs text-gray-500 whitespace-nowrap">Thursday</span>
                         </div>
-                        <div class="flex items-center justify-between mt-1">
-                            <p class="text-sm text-gray-600 truncate"> hello</p>
-                            <i class="fa-solid fa-thumbtack text-gray-500 text-sm"></i>
+                        <div class="flex items-center justify-between mt-1 gap-2">
+                            <p class="text-xs sm:text-sm text-gray-600 truncate">hello</p>
+                            <i class="fa-solid fa-thumbtack text-gray-500 text-sm flex-shrink-0"></i>
                         </div>
                     </div>
                 </div>
                 <!-- Chat 4 -->
-                <div class="h-24 px-6 flex items-center hover:bg-gray-100 cursor-pointer">
-                    <div class="w-14 h-14 rounded-full bg-green-200 flex items-center justify-center text-green-700 text-xl flex-shrink-0">
+                <div class="h-24 px-4 sm:px-5 md:px-6 flex items-center hover:bg-gray-100 cursor-pointer">
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-green-200 flex items-center justify-center text-green-700 text-xl flex-shrink-0">
                         <i class="fa-solid fa-user"></i>
                     </div>
-                    <div class="ml-4 flex-1 min-w-0 border-b border-gray-100 h-full flex flex-col justify-center">
-                        <div class="flex items-center justify-between">
-                            <h3 class="text-base font-medium text-gray-900">Jiya</h3>
-                            <span class="text-xs text-gray-500">3:27 pm</span>
+                    <div class="ml-3 sm:ml-4 flex-1 min-w-0 border-b border-gray-100 h-full flex flex-col justify-center">
+                        <div class="flex items-center justify-between gap-2">
+                            <h3 class="text-sm sm:text-base font-medium text-gray-900 truncate">Jiya</h3>
+                            <span class="text-xs text-gray-500 whitespace-nowrap">3:27 pm</span>
                         </div>
                     </div>
                 </div>
-              
-               
                 <!-- Chat 5 -->
-                <div class="h-24 px-6 flex items-center hover:bg-gray-100 cursor-pointer">
-                    <div class="w-14 h-14 rounded-full bg-yellow-300 flex items-center justify-center text-blue-600 text-xl flex-shrink-0">
+                <div class="h-24 px-4 sm:px-5 md:px-6 flex items-center hover:bg-gray-100 cursor-pointer">
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-yellow-300 flex items-center justify-center text-blue-600 text-xl flex-shrink-0">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </div>
-                    <div class="ml-4 flex-1 min-w-0 h-full flex flex-col justify-center">
-                        <div class="flex items-center justify-between">
-                            <h3 class="text-base font-medium text-gray-900">Flipkart</h3>
-                            <span class="text-xs text-gray-500">12:30 pm</span>
+                    <div class="ml-3 sm:ml-4 flex-1 min-w-0 h-full flex flex-col justify-center">
+                        <div class="flex items-center justify-between gap-2">
+                            <h3 class="text-sm sm:text-base font-medium text-gray-900 truncate">Flipkart</h3>
+                            <span class="text-xs text-gray-500 whitespace-nowrap">12:30 pm</span>
                         </div>
-                        <p class="text-sm text-gray-600 mt-1 truncate">Superfast Refund in just 2 mins: Dermato...</p>
+                        <p class="text-xs sm:text-sm text-gray-600 mt-1 truncate">Superfast Refund in just 2 mins: Dermato...</p>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Right Welcome Section -->
-        <div class="flex-1 bg-[#f7f5f2] flex flex-col items-center justify-center">
+        <div class="flex-1 min-w-0 bg-[#f7f5f2] flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 overflow-y-auto">
             <!-- Welcome Card -->
-            <div class="w-[500px] max-w-[90%] bg-white rounded-3xl p-10 text-center">
+            <div class="w-full max-w-[500px] bg-white rounded-3xl p-6 sm:p-8 md:p-10 text-center">
                 <!-- Illustration -->
-                <div class="w-64 h-44 mx-auto mb-7 flex items-center justify-center">
-                    <div class="relative w-44 h-28 border-4 border-gray-800 rounded-xl bg-[#f5efe5]">
-                        <div class="absolute -left-4 top-3 w-20 h-24 bg-green-400 border-4 border-gray-800 rounded-lg">
+                <div class="w-full h-36 sm:h-40 md:h-44 mx-auto mb-5 sm:mb-7 flex items-center justify-center">
+                    <div class="relative w-36 sm:w-40 md:w-44 h-24 sm:h-26 md:h-28 border-4 border-gray-800 rounded-xl bg-[#f5efe5]">
+                        <div class="absolute -left-4 top-3 w-16 sm:w-18 md:w-20 h-20 sm:h-22 md:h-24 bg-green-400 border-4 border-gray-800 rounded-lg">
                             <div class="w-3 h-3 bg-gray-800 rounded-full absolute top-2 left-2"></div>
                             <div class="absolute top-9 left-3 right-3 border-t-2 border-gray-800"></div>
                             <div class="absolute top-14 left-3 right-3 border-t-2 border-gray-800"></div>
                             <div class="absolute top-19 left-3 right-3 border-t-2 border-gray-800"></div>
                         </div>
-                        <div class="absolute right-8 top-7 text-green-500 text-5xl">
+                        <div class="absolute right-5 sm:right-7 md:right-8 top-6 sm:top-7 text-green-500 text-4xl sm:text-5xl">
                             <i class="fa-solid fa-phone"></i>
                         </div>
-                        <div class="absolute -bottom-5 left-[-15px] w-48 h-6 bg-green-100 border-4 border-gray-800 rounded-b-xl"></div>
+                        <div class="absolute -bottom-5 left-[-15px] w-40 sm:w-44 md:w-48 h-6 bg-green-100 border-4 border-gray-800 rounded-b-xl"></div>
                     </div>
                 </div>
                 <!-- Welcome Text -->
-                <h2 class="text-3xl font-normal text-gray-900 leading-tight">
+                <h2 class="text-2xl sm:text-3xl font-normal text-gray-900 leading-tight">
                     Voice and video calling is now available
                 </h2>
-                <p class="text-gray-500 text-base mt-4 leading-6">
+                <p class="text-gray-500 text-sm sm:text-base mt-4 leading-6">
                     Now you can make and join calls on WhatsApp Web.
                 </p>
-                <button type="button" class="mt-7 px-7 py-3 rounded-full bg-green-100 text-green-700 font-semibold hover:bg-green-200">
+                <button type="button" class="mt-6 sm:mt-7 px-6 sm:px-7 py-3 rounded-full bg-green-100 text-green-700 font-semibold hover:bg-green-200">
                     Go to Calls
                 </button>
             </div>
             <!-- Bottom Actions -->
-            <div class="flex items-start justify-center gap-10 mt-10">
+            <div class="w-full max-w-[600px] grid grid-cols-2 sm:grid-cols-4 gap-5 sm:gap-6 md:gap-10 mt-8 sm:mt-10">
                 <!-- Send Document -->
-                <div class="w-28 text-center">
-                    <button type="button" class="w-16 h-16 rounded-full bg-white flex items-center justify-center mx-auto text-gray-700 text-2xl">
+                <div class="text-center">
+                    <button type="button" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white flex items-center justify-center mx-auto text-gray-700 text-xl sm:text-2xl">
                         <i class="fa-regular fa-file-lines"></i>
                     </button>
-                    <p class="text-sm text-gray-800 mt-3">Send document</p>
+                    <p class="text-xs sm:text-sm text-gray-800 mt-3">Send document</p>
                 </div>
                 <!-- Add Contact -->
-                <div class="w-28 text-center">
-                    <button type="button" class="w-16 h-16 rounded-full bg-white flex items-center justify-center mx-auto text-gray-700 text-2xl">
+                <div class="text-center">
+                    <button type="button" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white flex items-center justify-center mx-auto text-gray-700 text-xl sm:text-2xl">
                         <i class="fa-solid fa-user-plus"></i>
                     </button>
-                    <p class="text-sm text-gray-800 mt-3">Add contact</p>
+                    <p class="text-xs sm:text-sm text-gray-800 mt-3">Add contact</p>
                 </div>
                 <!-- New Call -->
-                <div class="w-28 text-center">
-                    <button type="button" class="w-16 h-16 rounded-full bg-white flex items-center justify-center mx-auto text-gray-700 text-2xl">
+                <div class="text-center">
+                    <button type="button" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white flex items-center justify-center mx-auto text-gray-700 text-xl sm:text-2xl">
                         <i class="fa-solid fa-video"></i>
                     </button>
-                    <p class="text-sm text-gray-800 mt-3">New call</p>
+                    <p class="text-xs sm:text-sm text-gray-800 mt-3">New call</p>
                 </div>
                 <!-- Ask Meta AI -->
-                <div class="w-28 text-center">
-                    <button type="button" class="w-16 h-16 rounded-full bg-white flex items-center justify-center mx-auto text-purple-500 text-2xl">
+                <div class="text-center">
+                    <button type="button" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white flex items-center justify-center mx-auto text-purple-500 text-xl sm:text-2xl">
                         <i class="fa-solid fa-wand-magic-sparkles"></i>
                     </button>
-                    <p class="text-sm text-gray-800 mt-3">Ask Meta AI</p>
+                    <p class="text-xs sm:text-sm text-gray-800 mt-3">Ask Meta AI</p>
                 </div>
             </div>
         </div>
