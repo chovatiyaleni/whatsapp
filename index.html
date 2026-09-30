@@ -8,127 +8,74 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 </head>
 <body class="bg-[#f7f5f2] overflow-hidden">
-    <!-- Main WhatsApp Container -->
-    <div class="h-screen w-full flex overflow-hidden">
+    <div class="h-screen w-full flex overflow-hidden pb-16 md:pb-0">
         <!-- Left Navigation Sidebar -->
-        <div class="fixed bottom-0 left-0 right-0 z-50 h-16 bg-white border-t border-gray-200 flex items-center justify-center md:static md:h-screen md:w-16 lg:w-20 md:border-t-0 md:border-r flex-shrink-0">
-            <!-- Mobile Navigation -->
-            <div class="flex md:hidden items-center justify-around w-full px-2">
-                <!-- Chats -->
-                <button type="button" class="relative w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-800 text-base">
+        <div class="fixed bottom-0 left-0 right-0 z-50 h-16 md:static md:h-auto md:w-16 lg:w-20 bg-white border-t md:border-t-0 md:border-r border-gray-200 flex flex-row md:flex-col items-center justify-between px-2 md:px-0 py-2 md:py-3 flex-shrink-0">
+            <div class="flex flex-row md:flex-col items-center justify-around md:justify-start gap-1 sm:gap-2 md:gap-4 lg:gap-6 w-full">
+                <button type="button" class="relative w-10 h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-800 text-base md:text-lg lg:text-xl">
                     <i class="fa-regular fa-message"></i>
                 </button>
-                <!-- Calls -->
-                <button type="button" class="w-10 h-10 rounded-full flex items-center justify-center text-gray-600 text-base">
+                <button type="button" class="w-10 h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 rounded-full flex items-center justify-center text-gray-600 text-base md:text-lg lg:text-xl hover:bg-gray-100">
                     <i class="fa-solid fa-phone"></i>
                 </button>
-                <!-- Updates -->
-                <button type="button" class="relative w-10 h-10 rounded-full flex items-center justify-center text-gray-600 text-base">
+                <button type="button" class="relative w-10 h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 rounded-full flex items-center justify-center text-gray-600 text-base md:text-lg lg:text-xl hover:bg-gray-100">
                     <i class="fa-solid fa-circle-notch"></i>
                     <span class="absolute top-1 right-1 w-3 h-3 rounded-full bg-green-500"></span>
                 </button>
-                <!-- Communities -->
-                <button type="button" class="relative w-10 h-10 rounded-full flex items-center justify-center text-gray-600 text-base">
+                <button type="button" class="relative w-10 h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 rounded-full flex items-center justify-center text-gray-600 text-base md:text-lg lg:text-xl hover:bg-gray-100">
                     <i class="fa-solid fa-users"></i>
                     <span class="absolute top-1 right-1 w-3 h-3 rounded-full bg-green-500"></span>
                 </button>
-                <!-- Meta AI -->
-                <button type="button" class="w-10 h-10 rounded-full flex items-center justify-center text-purple-500 text-lg">
+                <div class="hidden md:block w-10 sm:w-12 border-t border-gray-200"></div>
+                <button type="button" class="w-10 h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 rounded-full flex items-center justify-center text-purple-500 text-lg md:text-xl lg:text-2xl hover:bg-gray-100">
                     <i class="fa-solid fa-wand-magic-sparkles"></i>
                 </button>
-                <!-- Gallery -->
-                <button type="button" class="w-10 h-10 rounded-full flex items-center justify-center text-gray-600 text-base">
+            </div>
+            <div class="flex flex-row md:flex-col items-center gap-1 sm:gap-2 md:gap-4 lg:gap-6">
+                <button type="button" class="w-10 h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 rounded-full flex items-center justify-center text-gray-600 text-base md:text-lg lg:text-xl hover:bg-gray-100">
                     <i class="fa-regular fa-image"></i>
                 </button>
-                <!-- Profile -->
-                <button type="button" class="w-10 h-10 rounded-full bg-orange-300 flex items-center justify-center text-white text-base">
+                <button type="button" class="w-10 h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 rounded-full bg-orange-300 flex items-center justify-center text-white text-base md:text-lg lg:text-xl">
                     <i class="fa-solid fa-user"></i>
                 </button>
             </div>
-            <!-- Desktop Navigation -->
-            <div class="hidden md:flex h-full w-full flex-col items-center justify-between py-3">
-                <!-- Top Navigation -->
-                <div class="flex flex-col items-center gap-4 lg:gap-6 w-full">
-                    <!-- Chats -->
-                    <button type="button" class="relative w-11 h-11 lg:w-12 lg:h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-800 text-lg lg:text-xl">
-                        <i class="fa-regular fa-message"></i>
-                    </button>
-                    <!-- Calls -->
-                    <button type="button" class="w-11 h-11 lg:w-12 lg:h-12 rounded-full flex items-center justify-center text-gray-600 text-lg lg:text-xl hover:bg-gray-100">
-                        <i class="fa-solid fa-phone"></i>
-                    </button>
-                    <!-- Updates -->
-                    <button type="button" class="relative w-11 h-11 lg:w-12 lg:h-12 rounded-full flex items-center justify-center text-gray-600 text-lg lg:text-xl hover:bg-gray-100">
-                        <i class="fa-solid fa-circle-notch"></i>
-                        <span class="absolute top-1 right-1 w-3 h-3 rounded-full bg-green-500"></span>
-                    </button>
-                    <!-- Communities -->
-                    <button type="button" class="relative w-11 h-11 lg:w-12 lg:h-12 rounded-full flex items-center justify-center text-gray-600 text-lg lg:text-xl hover:bg-gray-100">
-                        <i class="fa-solid fa-users"></i>
-                        <span class="absolute top-1 right-1 w-3 h-3 rounded-full bg-green-500"></span>
-                    </button>
-                    <!-- Divider -->
-                    <div class="w-10 lg:w-12 border-t border-gray-200"></div>
-                    <!-- Meta AI -->
-                    <button type="button" class="w-11 h-11 lg:w-12 lg:h-12 rounded-full flex items-center justify-center text-purple-500 text-xl lg:text-2xl hover:bg-gray-100">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>
-                    </button>
-                </div>
-                <!-- Bottom Navigation -->
-                <div class="flex flex-col items-center gap-4 lg:gap-6">
-                    <!-- Gallery -->
-                    <button type="button" class="w-11 h-11 lg:w-12 lg:h-12 rounded-full flex items-center justify-center text-gray-600 text-lg lg:text-xl hover:bg-gray-100">
-                        <i class="fa-regular fa-image"></i>
-                    </button>
-                    <!-- Profile -->
-                    <button type="button" class="w-11 h-11 lg:w-12 lg:h-12 rounded-full bg-orange-300 flex items-center justify-center text-white text-lg lg:text-xl">
-                        <i class="fa-solid fa-user"></i>
-                    </button>
-                </div>
-            </div>
         </div>
+
         <!-- Chat List Section -->
-        <div class="w-full md:w-[40%] lg:w-[30%] xl:w-[30%] bg-white border-r border-gray-200 flex flex-col flex-shrink-0 min-w-0 pb-16 md:pb-0">
-            <!-- Chat Header -->
+        <div id="chatListSection" class="w-full md:w-[40%] lg:w-[30%] xl:w-[30%] bg-white border-r border-gray-200 flex flex-col flex-shrink-0 min-w-0 pb-16 md:pb-0">
             <div class="h-20 px-4 sm:px-5 md:px-6 flex items-center justify-between flex-shrink-0">
                 <h1 class="text-2xl sm:text-3xl font-bold text-[#16a34a]">WhatsApp</h1>
                 <div class="flex items-center gap-4 sm:gap-6 md:gap-7">
                     <button type="button" class="text-gray-700 text-xl">
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </button>
-                    <button type="button" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-green-600 text-white flex items-center justify-center text-lg sm:text-xl">
+                    <button type="button" id="newChatBtn" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-green-600 text-white flex items-center justify-center text-base md:text-lg lg:text-xl">
                         <i class="fa-solid fa-message"></i>
                     </button>
                 </div>
             </div>
+
             <!-- Search -->
             <div class="px-4 sm:px-5 md:px-6 pb-3 flex-shrink-0">
                 <div class="h-11 sm:h-12 rounded-full bg-gray-100 flex items-center px-4 sm:px-5">
                     <i class="fa-solid fa-magnifying-glass text-gray-500 flex-shrink-0"></i>
-                    <input type="text" placeholder="Search or start a new chat" class="w-full min-w-0 bg-transparent outline-none ml-3 sm:ml-4 text-sm sm:text-base text-gray-700">
+                    <input type="text" id="searchInput" placeholder="Search by mobile number or name" class="w-full min-w-0 bg-transparent outline-none ml-3 sm:ml-4 text-sm sm:text-base text-gray-700">
                 </div>
             </div>
+
             <!-- Chat Filters -->
             <div class="px-4 sm:px-5 md:px-6 pb-4 flex items-center gap-2 overflow-x-auto flex-shrink-0">
-                <button type="button" class="px-4 sm:px-5 py-2 rounded-full bg-green-100 border border-green-300 text-green-700 text-sm font-medium whitespace-nowrap flex-shrink-0">
-                    All
-                </button>
-                <button type="button" class="px-4 sm:px-5 py-2 rounded-full border border-gray-300 text-gray-600 text-sm whitespace-nowrap flex-shrink-0">
-                    Unread 2
-                </button>
-                <button type="button" class="px-4 sm:px-5 py-2 rounded-full border border-gray-300 text-gray-600 text-sm whitespace-nowrap flex-shrink-0">
-                    Favourites
-                </button>
-                <button type="button" class="px-4 sm:px-5 py-2 rounded-full border border-gray-300 text-gray-600 text-sm whitespace-nowrap flex-shrink-0">
-                    Groups
-                </button>
-                <button type="button" class="w-10 h-10 rounded-full border border-gray-300 text-gray-600 flex items-center justify-center text-lg flex-shrink-0">
+                <button type="button" class="px-4 sm:px-5 py-2 rounded-full bg-green-100 border border-green-300 text-green-700 text-sm font-medium whitespace-nowrap flex-shrink-0">All</button>
+                <button type="button" class="px-4 sm:px-5 py-2 rounded-full border border-gray-300 text-gray-600 text-sm whitespace-nowrap flex-shrink-0">Unread 2</button>
+                <button type="button" class="px-4 sm:px-5 py-2 rounded-full border border-gray-300 text-gray-600 text-sm whitespace-nowrap flex-shrink-0">Favourites</button>
+                <button type="button" class="px-4 sm:px-5 py-2 rounded-full border border-gray-300 text-gray-600 text-sm whitespace-nowrap flex-shrink-0">Groups</button>
+                <button type="button" id="openRegisterBtn" class="w-10 h-10 rounded-full border border-gray-300 text-gray-600 flex items-center justify-center text-lg flex-shrink-0">
                     <i class="fa-solid fa-plus"></i>
                 </button>
             </div>
+
             <!-- Chat List -->
-            <div class="flex-1 overflow-y-auto overflow-x-hidden">
-                <!-- Chat 1 -->
+            <div id="chatList" class="flex-1 overflow-y-auto overflow-x-hidden">
                 <div class="h-24 px-4 sm:px-5 md:px-6 flex items-center hover:bg-gray-100 cursor-pointer">
                     <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-pink-200 flex items-center justify-center text-pink-700 text-xl flex-shrink-0">
                         <i class="fa-solid fa-users"></i>
@@ -140,7 +87,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Chat 2 -->
+
                 <div class="h-24 px-4 sm:px-5 md:px-6 flex items-center hover:bg-gray-100 cursor-pointer">
                     <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-orange-300 flex items-center justify-center text-white text-xl flex-shrink-0">
                         <i class="fa-solid fa-user"></i>
@@ -151,15 +98,12 @@
                             <span class="text-xs text-gray-500 whitespace-nowrap">3:27 pm</span>
                         </div>
                         <div class="flex items-center justify-between mt-1 gap-2">
-                            <p class="text-xs sm:text-sm text-gray-600 truncate">
-                                <span class="text-blue-500 mr-1">✓✓</span>
-                                <i class="fa-regular fa-file mr-1"></i> send pdf
-                            </p>
+                            <p class="text-xs sm:text-sm text-gray-600 truncate"><span class="text-blue-500 mr-1">✓✓</span><i class="fa-regular fa-file mr-1"></i> send pdf</p>
                             <i class="fa-solid fa-thumbtack text-gray-500 text-sm flex-shrink-0"></i>
                         </div>
                     </div>
                 </div>
-                <!-- Chat 3 -->
+
                 <div class="h-24 px-4 sm:px-5 md:px-6 flex items-center hover:bg-gray-100 cursor-pointer">
                     <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 text-xl flex-shrink-0">
                         <i class="fa-solid fa-user"></i>
@@ -175,7 +119,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Chat 4 -->
+
                 <div class="h-24 px-4 sm:px-5 md:px-6 flex items-center hover:bg-gray-100 cursor-pointer">
                     <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-green-200 flex items-center justify-center text-green-700 text-xl flex-shrink-0">
                         <i class="fa-solid fa-user"></i>
@@ -187,7 +131,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Chat 5 -->
+
                 <div class="h-24 px-4 sm:px-5 md:px-6 flex items-center hover:bg-gray-100 cursor-pointer">
                     <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-yellow-300 flex items-center justify-center text-blue-600 text-xl flex-shrink-0">
                         <i class="fa-solid fa-cart-shopping"></i>
@@ -202,11 +146,10 @@
                 </div>
             </div>
         </div>
-        <!-- Right Welcome Section -->
-        <div class="hidden md:flex flex-1 min-w-0 bg-[#f7f5f2] flex-col items-center justify-center p-4 sm:p-6 md:p-8 overflow-y-auto">
-            <!-- Welcome Card -->
+
+        <!-- Welcome Section -->
+        <div id="welcomeSection" class="flex-1 min-w-0 bg-[#f7f5f2] flex-col items-center justify-center p-4 sm:p-6 md:p-8 overflow-y-auto">
             <div class="w-full max-w-[500px] bg-white rounded-3xl p-6 sm:p-8 md:p-10 text-center">
-                <!-- Illustration -->
                 <div class="w-full h-36 sm:h-40 md:h-44 mx-auto mb-5 sm:mb-7 flex items-center justify-center">
                     <div class="relative w-36 sm:w-40 md:w-44 h-24 sm:h-26 md:h-28 border-4 border-gray-800 rounded-xl bg-[#f5efe5]">
                         <div class="absolute -left-4 top-3 w-16 sm:w-18 md:w-20 h-20 sm:h-22 md:h-24 bg-green-400 border-4 border-gray-800 rounded-lg">
@@ -221,49 +164,692 @@
                         <div class="absolute -bottom-5 left-[-15px] w-40 sm:w-44 md:w-48 h-6 bg-green-100 border-4 border-gray-800 rounded-b-xl"></div>
                     </div>
                 </div>
-                <!-- Welcome Text -->
-                <h2 class="text-2xl sm:text-3xl font-normal text-gray-900 leading-tight">
-                    Voice and video calling is now available
-                </h2>
-                <p class="text-gray-500 text-sm sm:text-base mt-4 leading-6">
-                    Now you can make and join calls on WhatsApp Web.
-                </p>
-                <button type="button" class="mt-6 sm:mt-7 px-6 sm:px-7 py-3 rounded-full bg-green-100 text-green-700 font-semibold hover:bg-green-200">
-                    Go to Calls
-                </button>
+
+                <h2 class="text-2xl sm:text-3xl font-normal text-gray-900 leading-tight">Voice and video calling is now available</h2>
+                <p class="text-gray-500 text-sm sm:text-base mt-4 leading-6">Now you can make and join calls on WhatsApp Web.</p>
+                <button type="button" class="mt-6 sm:mt-7 px-6 sm:px-7 py-3 rounded-full bg-green-100 text-green-700 font-semibold hover:bg-green-200">Go to Calls</button>
             </div>
-            <!-- Bottom Actions -->
+
             <div class="w-full max-w-[600px] grid grid-cols-2 sm:grid-cols-4 gap-5 sm:gap-6 md:gap-10 mt-8 sm:mt-10">
-                <!-- Send Document -->
                 <div class="text-center">
-                    <button type="button" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white flex items-center justify-center mx-auto text-gray-700 text-xl sm:text-2xl">
+                    <button type="button" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white flex items-center justify-center mx-auto text-gray-700 text-lg md:text-xl lg:text-2xl">
                         <i class="fa-regular fa-file-lines"></i>
                     </button>
                     <p class="text-xs sm:text-sm text-gray-800 mt-3">Send document</p>
                 </div>
-                <!-- Add Contact -->
+
                 <div class="text-center">
-                    <button type="button" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white flex items-center justify-center mx-auto text-gray-700 text-xl sm:text-2xl">
+                    <button type="button" id="addContactDesktopBtn" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white flex items-center justify-center mx-auto text-gray-700 text-lg md:text-xl lg:text-2xl">
                         <i class="fa-solid fa-user-plus"></i>
                     </button>
                     <p class="text-xs sm:text-sm text-gray-800 mt-3">Add contact</p>
                 </div>
-                <!-- New Call -->
+
                 <div class="text-center">
-                    <button type="button" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white flex items-center justify-center mx-auto text-gray-700 text-xl sm:text-2xl">
+                    <button type="button" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white flex items-center justify-center mx-auto text-gray-700 text-lg md:text-xl lg:text-2xl">
                         <i class="fa-solid fa-video"></i>
                     </button>
                     <p class="text-xs sm:text-sm text-gray-800 mt-3">New call</p>
                 </div>
-                <!-- Ask Meta AI -->
+
                 <div class="text-center">
-                    <button type="button" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white flex items-center justify-center mx-auto text-purple-500 text-xl sm:text-2xl">
+                    <button type="button" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white flex items-center justify-center mx-auto text-purple-500 text-lg md:text-xl lg:text-2xl">
                         <i class="fa-solid fa-wand-magic-sparkles"></i>
                     </button>
                     <p class="text-xs sm:text-sm text-gray-800 mt-3">Ask Meta AI</p>
                 </div>
             </div>
         </div>
+
+        <!-- Actual Chat Section -->
+       <div id="chatSection" class="hidden fixed inset-0 z-[60] bg-white md:static flex-1 min-w-0 flex-col">
+            <!-- Chat Header -->
+            <div class="h-16 sm:h-20 bg-white border-b border-gray-200 flex items-center px-3 sm:px-5 flex-shrink-0">
+                <button type="button" id="backChatBtn" class="w-10 h-10 rounded-full hover:bg-gray-100 flex items-center justify-center text-gray-700 mr-2 md:hidden">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-orange-300 flex items-center justify-center text-white text-lg sm:text-xl flex-shrink-0">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="ml-3 min-w-0 flex-1">
+                    <h2 id="chatUserName" class="font-semibold text-gray-900 truncate">User</h2>
+                    <p id="chatUserPhone" class="text-xs sm:text-sm text-gray-500 truncate"></p>
+                </div>
+
+                <div class="flex items-center gap-3 sm:gap-5 text-gray-600">
+                    <button type="button" class="w-9 h-9 rounded-full hover:bg-gray-100 flex items-center justify-center">
+                        <i class="fa-solid fa-video"></i>
+                    </button>
+                    <button type="button" class="w-9 h-9 rounded-full hover:bg-gray-100 flex items-center justify-center">
+                        <i class="fa-solid fa-phone"></i>
+                    </button>
+                    <button type="button" class="w-9 h-9 rounded-full hover:bg-gray-100 flex items-center justify-center">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Messages -->
+            <div id="messagesContainer" class="flex-1 overflow-y-auto p-3 sm:p-5 bg-[#efeae2]">
+                <div id="messagesList" class="max-w-4xl mx-auto flex flex-col gap-2"></div>
+            </div>
+
+            <!-- Message Input -->
+            <div class="min-h-16 bg-white border-t border-gray-200 flex items-center gap-2 px-3 sm:px-5 py-2 flex-shrink-0">
+                <button type="button" class="w-10 h-10 rounded-full hover:bg-gray-100 flex items-center justify-center text-gray-600 flex-shrink-0">
+                    <i class="fa-regular fa-face-smile text-xl"></i>
+                </button>
+
+                <button type="button" class="w-10 h-10 rounded-full hover:bg-gray-100 flex items-center justify-center text-gray-600 flex-shrink-0">
+                    <i class="fa-solid fa-paperclip"></i>
+                </button>
+
+                <input
+                    type="text"
+                    id="messageInput"
+                    placeholder="Type a message"
+                    autocomplete="off"
+                    class="flex-1 h-11 bg-gray-100 rounded-full px-5 outline-none text-sm sm:text-base"
+                >
+
+                <button type="button" id="sendMessageBtn" class="w-11 h-11 rounded-full bg-green-600 hover:bg-green-700 text-white flex items-center justify-center flex-shrink-0">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
     </div>
+
+    <!-- Register User Modal -->
+    <div id="registerModal" class="hidden fixed inset-0 z-[100] bg-black/50 items-center justify-center p-4">
+        <div class="w-full max-w-md bg-white rounded-2xl p-6 shadow-xl">
+            <div class="flex items-center justify-between mb-5">
+                <h2 class="text-xl font-bold text-gray-900">Create User</h2>
+                <button type="button" id="closeRegisterBtn" class="w-9 h-9 rounded-full hover:bg-gray-100 text-gray-600">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form id="registerForm">
+                <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                <input id="nameInput" type="text" placeholder="Enter your name" required class="w-full h-11 border border-gray-300 rounded-lg px-4 outline-none focus:border-green-500">
+
+                <label class="block text-sm font-medium text-gray-700 mb-2 mt-4">Mobile Number</label>
+                <input id="phoneInput" type="tel" inputmode="numeric" maxlength="10" placeholder="Enter 10 digit number" required class="w-full h-11 border border-gray-300 rounded-lg px-4 outline-none focus:border-green-500">
+
+                <p id="registerMessage" class="text-sm mt-3 hidden"></p>
+
+                <button id="registerButton" type="submit" class="w-full h-11 mt-5 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-700">
+                    Create User
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+        import {
+            getFirestore,
+            collection,
+            addDoc,
+            getDocs,
+            query,
+            where,
+            orderBy,
+            onSnapshot,
+            serverTimestamp
+        } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBEO5zanGl8RXpFRHg2g78j7N8sIE1Lzh0",
+            authDomain: "userdetails-bfa41.firebaseapp.com",
+            projectId: "userdetails-bfa41",
+            storageBucket: "userdetails-bfa41.firebasestorage.app",
+            messagingSenderId: "322483984600",
+            appId: "1:322483984600:web:aa034ac750605771a3dfad",
+            measurementId: "G-S2JMC089GJ"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        const registerModal = document.getElementById("registerModal");
+        const openRegisterBtn = document.getElementById("openRegisterBtn");
+        const addContactDesktopBtn = document.getElementById("addContactDesktopBtn");
+        const newChatBtn = document.getElementById("newChatBtn");
+        const closeRegisterBtn = document.getElementById("closeRegisterBtn");
+
+        const registerForm = document.getElementById("registerForm");
+        const nameInput = document.getElementById("nameInput");
+        const phoneInput = document.getElementById("phoneInput");
+        const registerMessage = document.getElementById("registerMessage");
+        const registerButton = document.getElementById("registerButton");
+
+        const searchInput = document.getElementById("searchInput");
+        const chatList = document.getElementById("chatList");
+
+        const chatListSection = document.getElementById("chatListSection");
+        const welcomeSection = document.getElementById("welcomeSection");
+        const chatSection = document.getElementById("chatSection");
+
+        const backChatBtn = document.getElementById("backChatBtn");
+        const chatUserName = document.getElementById("chatUserName");
+        const chatUserPhone = document.getElementById("chatUserPhone");
+
+        const messagesContainer = document.getElementById("messagesContainer");
+        const messagesList = document.getElementById("messagesList");
+
+        const messageInput = document.getElementById("messageInput");
+        const sendMessageBtn = document.getElementById("sendMessageBtn");
+
+        const originalChatList = chatList.innerHTML;
+
+        let currentUser = JSON.parse(localStorage.getItem("whatsappCurrentUser") || "null");
+        let selectedUser = null;
+        let unsubscribeMessages = null;
+
+        function openRegisterModal() {
+            registerModal.classList.remove("hidden");
+            registerModal.classList.add("flex");
+            registerMessage.classList.add("hidden");
+            nameInput.focus();
+        }
+
+        function closeRegisterModal() {
+            registerModal.classList.add("hidden");
+            registerModal.classList.remove("flex");
+            registerForm.reset();
+            registerMessage.classList.add("hidden");
+        }
+
+        openRegisterBtn.addEventListener("click", openRegisterModal);
+        addContactDesktopBtn.addEventListener("click", openRegisterModal);
+        newChatBtn.addEventListener("click", openRegisterModal);
+        closeRegisterBtn.addEventListener("click", closeRegisterModal);
+
+        registerModal.addEventListener("click", function(event) {
+            if (event.target === registerModal) {
+                closeRegisterModal();
+            }
+        });
+
+        phoneInput.addEventListener("input", function() {
+            this.value = this.value.replace(/[^0-9]/g, "").slice(0, 10);
+        });
+
+        registerForm.addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            const name = nameInput.value.trim();
+            const phone = phoneInput.value.trim();
+
+            if (!name) {
+                showRegisterMessage("Please enter your name.", "error");
+                return;
+            }
+
+            if (phone.length !== 10) {
+                showRegisterMessage("Please enter a valid 10 digit mobile number.", "error");
+                return;
+            }
+
+            registerButton.disabled = true;
+            registerButton.textContent = "Creating...";
+
+            try {
+                const usersRef = collection(db, "users");
+                const existingUserQuery = query(usersRef, where("phone", "==", phone));
+                const existingUsers = await getDocs(existingUserQuery);
+
+                if (!existingUsers.empty) {
+                    showRegisterMessage("This mobile number is already registered.", "error");
+                    registerButton.disabled = false;
+                    registerButton.textContent = "Create User";
+                    return;
+                }
+
+                const userDocument = await addDoc(usersRef, {
+                    name: name,
+                    phone: phone
+                });
+
+                currentUser = {
+                    id: userDocument.id,
+                    name: name,
+                    phone: phone
+                };
+
+                localStorage.setItem("whatsappCurrentUser", JSON.stringify(currentUser));
+
+                showRegisterMessage("User created successfully!", "success");
+
+                registerForm.reset();
+
+                setTimeout(function() {
+                    closeRegisterModal();
+                }, 1000);
+
+            } catch (error) {
+                console.error("Firebase error:", error);
+                showRegisterMessage("User could not be created. Check Firebase connection.", "error");
+            }
+
+            registerButton.disabled = false;
+            registerButton.textContent = "Create User";
+        });
+
+        function showRegisterMessage(message, type) {
+            registerMessage.textContent = message;
+
+            registerMessage.classList.remove(
+                "hidden",
+                "text-red-600",
+                "text-green-600"
+            );
+
+            if (type === "success") {
+                registerMessage.classList.add("text-green-600");
+            } else {
+                registerMessage.classList.add("text-red-600");
+            }
+        }
+
+        let searchTimer;
+
+        searchInput.addEventListener("input", function() {
+            clearTimeout(searchTimer);
+
+            const searchText = searchInput.value.trim();
+
+            if (searchText.length === 0) {
+                chatList.innerHTML = originalChatList;
+                return;
+            }
+
+            searchTimer = setTimeout(function() {
+                searchUser(searchText);
+            }, 400);
+        });
+
+        async function searchUser(searchText) {
+            chatList.innerHTML = `
+                <div class="p-6 text-center text-gray-500">
+                    <i class="fa-solid fa-spinner fa-spin text-xl"></i>
+                    <p class="mt-2 text-sm">Searching...</p>
+                </div>
+            `;
+
+            try {
+                const usersRef = collection(db, "users");
+                const userSnapshot = await getDocs(usersRef);
+
+                const searchValue = searchText.toLowerCase().trim();
+                let foundUsers = [];
+
+                userSnapshot.forEach(function(documentSnapshot) {
+                    const user = documentSnapshot.data();
+
+                    const name = String(user.name || "").toLowerCase();
+                    const phone = String(user.phone || "");
+
+                    if (
+                        name.includes(searchValue) ||
+                        phone.includes(searchValue)
+                    ) {
+                        foundUsers.push({
+                            id: documentSnapshot.id,
+                            ...user
+                        });
+                    }
+                });
+
+                if (foundUsers.length === 0) {
+                    chatList.innerHTML = `
+                        <div class="p-8 text-center">
+                            <div class="w-16 h-16 mx-auto rounded-full bg-gray-100 flex items-center justify-center text-gray-400 text-2xl">
+                                <i class="fa-solid fa-user-xmark"></i>
+                            </div>
+
+                            <h3 class="mt-4 text-lg font-semibold text-gray-800">
+                                No user found
+                            </h3>
+
+                            <p class="mt-1 text-sm text-gray-500">
+                                No user is registered with this name or number.
+                            </p>
+                        </div>
+                    `;
+
+                    return;
+                }
+
+                chatList.innerHTML = "";
+
+                foundUsers.forEach(function(user) {
+                    const userDiv = document.createElement("div");
+
+                    userDiv.className =
+                        "h-24 px-4 sm:px-5 md:px-6 flex items-center hover:bg-gray-100 cursor-pointer";
+
+                    userDiv.innerHTML = `
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-orange-300 flex items-center justify-center text-white text-xl flex-shrink-0">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <div class="ml-3 sm:ml-4 flex-1 min-w-0 border-b border-gray-100 h-full flex flex-col justify-center">
+                            <h3 class="text-sm sm:text-base font-medium text-gray-900 truncate">
+                                ${escapeHtml(user.name)}
+                            </h3>
+
+                            <p class="text-xs sm:text-sm text-gray-600 mt-1 truncate">
+                                ${escapeHtml(user.phone)}
+                            </p>
+                        </div>
+                    `;
+
+                    userDiv.addEventListener("click", function() {
+                        openChat(user);
+                    });
+
+                    chatList.appendChild(userDiv);
+                });
+
+            } catch (error) {
+                console.error("Search error:", error);
+
+                chatList.innerHTML = `
+                    <div class="p-8 text-center">
+                        <h3 class="text-lg font-semibold text-gray-800">
+                            Search failed
+                        </h3>
+
+                        <p class="mt-1 text-sm text-gray-500">
+                            Please check your Firebase connection.
+                        </p>
+                    </div>
+                `;
+            }
+        }
+
+        function openChat(user) {
+            selectedUser = user;
+
+            chatUserName.textContent = user.name;
+            chatUserPhone.textContent = user.phone;
+
+            welcomeSection.classList.add("hidden");
+            welcomeSection.classList.remove("flex");
+
+            chatSection.classList.remove("hidden");
+            chatSection.classList.add("flex");
+
+            if (window.innerWidth < 768) {
+                chatListSection.classList.remove("hidden");
+            } else {
+                welcomeSection.classList.remove("hidden");
+                welcomeSection.classList.add("flex");
+            }
+
+            messageInput.value = "";
+            messagesList.innerHTML = `
+                <div class="text-center text-gray-500 text-sm py-5">
+                    Loading messages...
+                </div>
+            `;
+
+            loadMessages();
+
+            setTimeout(function() {
+                messageInput.focus();
+            }, 200);
+        }
+
+        function getConversationId() {
+            if (!currentUser || !selectedUser) {
+                return null;
+            }
+
+            const userIds = [
+                currentUser.id,
+                selectedUser.id
+            ].sort();
+
+            return userIds[0] + "_" + userIds[1];
+        }
+
+        function loadMessages() {
+            if (unsubscribeMessages) {
+                unsubscribeMessages();
+                unsubscribeMessages = null;
+            }
+
+            const conversationId = getConversationId();
+
+            if (!conversationId) {
+                messagesList.innerHTML = `
+                    <div class="text-center text-gray-500 text-sm py-5">
+                        Please create/register your user first.
+                    </div>
+                `;
+                return;
+            }
+
+            const messagesRef = collection(db, "messages");
+
+            const messagesQuery = query(
+                messagesRef,
+                where("conversationId", "==", conversationId)
+            );
+
+            unsubscribeMessages = onSnapshot(
+                messagesQuery,
+                function(snapshot) {
+                    let messages = [];
+
+                    snapshot.forEach(function(documentSnapshot) {
+                        messages.push({
+                            id: documentSnapshot.id,
+                            ...documentSnapshot.data()
+                        });
+                    });
+
+                    messages.sort(function(a, b) {
+                        const timeA = getMessageTime(a);
+                        const timeB = getMessageTime(b);
+
+                        return timeA - timeB;
+                    });
+
+                    renderMessages(messages);
+                },
+                function(error) {
+                    console.error("Message listener error:", error);
+
+                    messagesList.innerHTML = `
+                        <div class="text-center text-red-500 text-sm py-5">
+                            Could not load messages.
+                        </div>
+                    `;
+                }
+            );
+        }
+
+        function getMessageTime(message) {
+            if (!message.createdAt) {
+                return 0;
+            }
+
+            if (message.createdAt.seconds) {
+                return message.createdAt.seconds * 1000;
+            }
+
+            return 0;
+        }
+
+        function renderMessages(messages) {
+            messagesList.innerHTML = "";
+
+            if (messages.length === 0) {
+                messagesList.innerHTML = `
+                    <div class="flex justify-center py-8">
+                        <div class="bg-white/80 rounded-lg px-4 py-2 text-xs sm:text-sm text-gray-500 shadow-sm">
+                            No messages yet. Start the conversation.
+                        </div>
+                    </div>
+                `;
+
+                return;
+            }
+
+            messages.forEach(function(message) {
+                const isMine =
+                    currentUser &&
+                    message.senderId === currentUser.id;
+
+                const messageWrapper = document.createElement("div");
+
+                messageWrapper.className =
+                    "flex " +
+                    (isMine ? "justify-end" : "justify-start");
+
+                const messageBubble = document.createElement("div");
+
+                messageBubble.className =
+                    "max-w-[80%] sm:max-w-[65%] rounded-2xl px-4 py-2 shadow-sm " +
+                    (isMine
+                        ? "bg-[#d9fdd3] rounded-br-md"
+                        : "bg-white rounded-bl-md");
+
+                const messageText = document.createElement("p");
+
+                messageText.className =
+                    "text-sm sm:text-base text-gray-800 whitespace-pre-wrap break-words";
+
+                messageText.textContent = message.text || "";
+
+                const messageTime = document.createElement("div");
+
+                messageTime.className =
+                    "text-[10px] text-gray-500 text-right mt-1";
+
+                messageTime.textContent = formatMessageTime(message);
+
+                messageBubble.appendChild(messageText);
+                messageBubble.appendChild(messageTime);
+
+                messageWrapper.appendChild(messageBubble);
+                messagesList.appendChild(messageWrapper);
+            });
+
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function formatMessageTime(message) {
+            if (!message.createdAt || !message.createdAt.seconds) {
+                return "";
+            }
+
+            const date = new Date(message.createdAt.seconds * 1000);
+
+            return date.toLocaleTimeString([], {
+                hour: "numeric",
+                minute: "2-digit"
+            });
+        }
+
+        async function sendMessage() {
+            const text = messageInput.value.trim();
+
+            if (!text) {
+                return;
+            }
+
+            if (!currentUser) {
+                alert("Please create your user first.");
+                return;
+            }
+
+            if (!selectedUser) {
+                return;
+            }
+
+            sendMessageBtn.disabled = true;
+
+            try {
+                const messagesRef = collection(db, "messages");
+
+                await addDoc(messagesRef, {
+                    conversationId: getConversationId(),
+                    senderId: currentUser.id,
+                    senderName: currentUser.name,
+                    receiverId: selectedUser.id,
+                    receiverName: selectedUser.name,
+                    text: text,
+                    createdAt: serverTimestamp()
+                });
+
+                messageInput.value = "";
+                messageInput.focus();
+
+            } catch (error) {
+                console.error("Send message error:", error);
+                alert("Message could not be sent. Please check Firebase.");
+            }
+
+            sendMessageBtn.disabled = false;
+        }
+
+        sendMessageBtn.addEventListener("click", sendMessage);
+
+        messageInput.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                sendMessage();
+            }
+        });
+
+        backChatBtn.addEventListener("click", function() {
+            closeChat();
+        });
+
+        function closeChat() {
+            if (unsubscribeMessages) {
+                unsubscribeMessages();
+                unsubscribeMessages = null;
+            }
+
+            selectedUser = null;
+
+            chatSection.classList.add("hidden");
+            chatSection.classList.remove("flex");
+
+            if (window.innerWidth < 768) {
+                chatListSection.classList.remove("hidden");
+            } else {
+                welcomeSection.classList.remove("hidden");
+            }
+        }
+
+        function escapeHtml(value) {
+            return String(value).replace(/[&<>"']/g, function(character) {
+                const htmlEntities = {
+                    "&": "&amp;",
+                    "<": "&lt;",
+                    ">": "&gt;",
+                    '"': "&quot;",
+                    "'": "&#039;"
+                };
+
+                return htmlEntities[character];
+            });
+        }
+
+       
+
+        if (currentUser) {
+            console.log("Current WhatsApp user:", currentUser);
+        }
+    </script>
 </body>
 </html>
